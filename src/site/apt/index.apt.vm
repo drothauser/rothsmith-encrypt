@@ -1,0 +1,49 @@
+            ------
+            Rothsmith Encryption Utilities
+            ------
+            Doug Rothauser
+            ------
+            2012-09-05
+
+Rothsmith Encryption Utilities
+
+  The purpose of this project is to provide functions for encrypting and decrypting text data
+  and files.
+  
+* Text Data Encryption
+
+	* Use {{{../site/apidocs/com/rothsmith/encrypt/text/TDesTextEncryptor.html}TDesTextEncryptor}}
+	to encrypt and decrypt Strings.
+	
+	<Sample Usage for encryption and decrypting text using the default built-in password>:
+	
+%{include|snippet=#text-encryption-nopwd|source=src/test/java/com/rothsmith/encrypt/text/TDesTextEncryptorTest.java|code=java}
+	
+	<Sample Usage for encryption and decrypting text using a user-defined password>:
+	
+%{include|snippet=#text-encryption-pwd|source=src/test/java/com/rothsmith/encrypt/text/TDesTextEncryptorTest.java|code=java}
+
+
+* PGP File Encryption
+
+	<<IMPORTANT>>! The <"Unlimited Strength Java(TM) Cryptography Extension Policy Files 
+	for the Java(TM) Platform, Standard Edition Development Kit, v6"> is required for 
+	{{{http://www.bouncycastle.org/}Bouncy Castle's}} cryptography libraries. It must be installed into the 
+	%JAVA_HOME%/jre/lib/security folder. It can be downloaded 
+	{{{http://www.oracle.com/technetwork/java/javase/downloads/jce-6-download-429243.html}from here}}. 
+	Refer to the README.txt in the downloaded zip file for more information. 
+
+	* Use {{{../site/apidocs/com/rothsmith/encrypt/pgp/BcPGPEncryptCommand.html}BcPGPEncryptCommand}}
+	to encrypt files using PGP.
+
+	<Sample Usage for encrypting a file using BcPGPEncryptCommand>:
+	
+%{include|snippet=#pgp-encrypt|source=src/test/java/com/rothsmith/encrypt/pgp/BcPGPFileCommandTest.java|code=java}
+	
+	* Use {{{../site/apidocs/com/rothsmith/encrypt/pgp/BcPGPDecryptCommand.html}BcPGPDecryptCommand}}
+	to decrypt files using PGP.
+
+	<Sample Usage for decrypting a file using BcPGPDecryptCommand>:
+	
+%{include|snippet=#pgp-decrypt|source=src/test/java/com/rothsmith/encrypt/pgp/BcPGPFileCommandTest.java|code=java}
+ 

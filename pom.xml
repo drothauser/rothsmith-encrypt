@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<artifactId>rothsmith-common</artifactId>
+		<groupId>com.rothsmith</groupId>
+		<version>1.2.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>rothsmith-encrypt</artifactId>
+
+	<properties>
+		<pmd.rulesfile>${basedir}/pmdrules.xml</pmd.rulesfile>
+		<checkstyle.config>${basedir}/checkstyle_checks.xml</checkstyle.config>
+	</properties>
+
+	<name>Rothsmith Encryption</name>
+	<description>Library of helpers to simplify encryption and decryption operations.</description>
+
+	<url>http://nexus.rothsmith-group.com:9081/nexus/content/sites/site/rothsmith-encrypt/</url>
+
+	<inceptionYear>2011</inceptionYear>
+	<scm>
+		<connection>scm:git:git@github.com:drothauser/rothsmith-encrypt.git</connection>
+		<developerConnection>scm:git:git@github.com:drothauser/rothsmith-encrypt.git</developerConnection>
+		<url>https://github.com/drothauser/rothsmith-encrypt.git</url>
+		<tag>HEAD</tag>
+	</scm>
+
+	<ciManagement>
+		<system>Jenkins</system>
+		<url>http://ec2-54-69-215-107.us-west-2.compute.amazonaws.com:8080/view/All/job/rothsmith-encrypt/</url>
+	</ciManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<type>jar</type>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.bouncycastle</groupId>
+			<artifactId>bcpg-jdk16</artifactId>
+			<version>1.46</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.4</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>
