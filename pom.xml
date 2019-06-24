@@ -4,7 +4,7 @@
 	<parent>
 		<artifactId>rothsmith-parent</artifactId>
 		<groupId>net.rothsmith</groupId>
-		<version>1.0.0</version>
+		<version>1</version>
 	</parent>
 	<artifactId>rothsmith-encrypt</artifactId>
 	<version>${revision}${changelist}</version>
