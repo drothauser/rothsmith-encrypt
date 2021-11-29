@@ -1,5 +1,5 @@
 /*
- * (c) 2009 FCCI Insurance Group All Rights Reserved.
+ * (c) 2009 Rothsmith LLC All Rights Reserved.
  */
 package com.rothsmith.encrypt.text;
 
